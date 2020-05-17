@@ -1,0 +1,58 @@
+{
+    "data": [
+        {
+            "id": "Test Collection",
+            "type": "collection",
+            "attributes": {
+                "name": "Test Collection",
+                "feeds": [
+                    "https://joshuaj.co.uk/rss.xml",
+                    "https://joshwcomeau.com/rss.xml"
+                ],
+                "items": [
+                    {
+                        "title": "Test Item",
+                        "image": "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
+                        "description": "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
+                        "url": "joshuaj.co.uk",
+                        "date": "Sat, 22 Feb 2020"
+                    },
+                    {
+                        "title": "Test Item",
+                        "image": "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
+                        "description": "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
+                        "url": "joshuaj.co.uk",
+                        "date": "Sat, 22 Feb 2020"
+                    },
+                    {
+                        "title": "Test Item",
+                        "image": "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
+                        "description": "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
+                        "url": "joshuaj.co.uk",
+                        "date": "Sat, 22 Feb 2020"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "Test Collection 2",
+            "type": "collection",
+            "attributes": {
+                "name": "Test Collection 2",
+                "feeds": [
+                    "https://joshuaj.co.uk/rss.xml",
+                    "https://joshwcomeau.com/rss.xml"
+                ],
+                "items": [
+                    {
+                        "title": "Test Item",
+                        "image": "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
+                        "description": "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
+                        "url": "joshuaj.co.uk",
+                        "date": "Sat, 22 Feb 2020"
+                    }
+                ]
+            }
+        }
+    ]
+}

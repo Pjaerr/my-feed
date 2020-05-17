@@ -1,0 +1,14 @@
+<section class="feed">
+    <ul class="feed__list">
+        {{#each @items as |item|}}
+            <li class="feed__item">
+                <FeedItem
+                    @image={{item.image}}
+                    @url={{item.url}}
+                    @title={{item.title}}
+                    @description={{item.description}}
+                    @date={{item.date}}/>
+            </li>
+        {{/each}}
+    </ul>
+</section>

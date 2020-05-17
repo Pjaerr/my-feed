@@ -1,0 +1,6 @@
+<Collection::Tabs
+    @tabs={{this.tabs}}
+    @onTabChange={{this.setActiveCollection}} 
+    @activeTab={{this.activeCollection.name}}/>
+
+{{yield this.activeCollection.items}}

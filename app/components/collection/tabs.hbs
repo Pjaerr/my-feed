@@ -1,0 +1,9 @@
+<ul class="collection-tabs">
+    {{#each @tabs as |tab|}}
+    <li class="collection-tabs__tab {{if (isequal @activeTab tab.name) "collection-tabs__tab--active"}}">
+        <button type="button" {{on "click" (fn @onTabChange tab.index)}}>
+            {{tab.name}}
+        </button>
+    </li>
+    {{/each}}
+</ul>
