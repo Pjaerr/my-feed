@@ -3,23 +3,16 @@ import { tracked } from "@glimmer/tracking";
 import { action } from "@ember/object";
 
 export default class CollectionComponent extends Component {
-  @tracked activeCollection;
-  tabs = [];
+  @tracked activeCollection = this.args.collections[0];
 
-  constructor(...args) {
-    super(...args);
-
-    this.activeCollection = this.args.collections.objectAt(0);
-
-    this.args.collections.forEach((collection, index) => {
-      this.tabs.push({
-        name: collection.name,
-        index,
-      });
-    });
-  }
+  tabs = this.args.collections.map((collection, index) => {
+    return {
+      name: collection.name,
+      index,
+    };
+  });
 
   @action setActiveCollection(index) {
-    this.activeCollection = this.args.collections.objectAt(index);
+    this.activeCollection = this.args.collections[index];
   }
 }

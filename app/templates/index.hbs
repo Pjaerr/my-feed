@@ -1,3 +1,8 @@
-<Collection @collections={{@model}} as |activeCollectionFeedItems|>
-    <Feed @items={{activeCollectionFeedItems}}/>
-</Collection>
+
+{{#if @model}}
+    <Collection @collections={{@model}} as |activeCollectionFeedItems|>
+        <Feed @items={{activeCollectionFeedItems}}/>
+    </Collection>
+{{else}}
+    <NoFeeds/>
+{{/if}}
