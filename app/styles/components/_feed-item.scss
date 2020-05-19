@@ -2,6 +2,9 @@
 $spacingBetweenFeedItems: 35px;
 
 .feed-item {
+  text-decoration: none;
+  color: var(--colour-text);
+
   display: flex;
   margin-top: $spacingBetweenFeedItems;
   margin-bottom: $spacingBetweenFeedItems;
