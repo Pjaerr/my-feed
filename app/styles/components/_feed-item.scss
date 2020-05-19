@@ -1,0 +1,67 @@
+@import "../variables";
+$spacingBetweenFeedItems: 35px;
+
+.feed-item {
+  display: flex;
+  margin-top: $spacingBetweenFeedItems;
+  margin-bottom: $spacingBetweenFeedItems;
+
+  max-width: 600px;
+}
+
+.feed-item__left {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  margin-right: 20px;
+}
+
+.feed-item__image {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 3.5px;
+
+  @media (min-width: $brk-small) {
+    width: 140px;
+    height: 120px;
+  }
+
+  @media (min-width: $brk-medium) {
+    width: 180px;
+    height: 160px;
+  }
+}
+
+.feed-item__right {
+  display: grid;
+  row-gap: 5px;
+}
+
+.feed-item__url,
+.feed-item__title,
+.feed-item__description,
+.feed-item__date {
+  margin: 0;
+}
+
+.feed-item__url {
+  font-size: var(--fontsize-sub-text);
+  color: var(--colour-highlight);
+}
+
+.feed-item__title {
+  font-size: var(--fontsize-heading);
+}
+
+.feed-item__description {
+  font-size: var(--fontsize-body);
+
+  line-height: 1.5em;
+  overflow: hidden; /* prevents extra lines from being visible */
+  height: 3em; /* height is 2x line-height, so two lines will display */
+}
+
+.feed-item__date {
+  font-size: var(--fontsize-sub-text);
+}

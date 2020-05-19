@@ -1,4 +1,41 @@
 @import "./components/all";
+@import "variables";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  /*CSS Custom Properties*/
+
+  /* Sizes*/
+  --fontsize-heading: 1em;
+  --fontsize-body: 0.8em;
+  --fontsize-sub-text: 0.6em;
+
+  /* Colours*/
+  --colour-text: #2c3e50;
+  --colour-highlight: #e67e22;
+
+  @media (min-width: $brk-small) {
+    --fontsize-heading: 1.2em;
+    --fontsize-body: 1em;
+    --fontsize-sub-text: 0.8em;
+  }
+
+  @media (min-width: $brk-medium) {
+    --fontsize-heading: 1.4em;
+    --fontsize-body: 1.2em;
+    --fontsize-sub-text: 1em;
+  }
+
+  /*Global Styles*/
+  color: var(--colour-text);
+}
 
 .container {
   display: block;
