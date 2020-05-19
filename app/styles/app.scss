@@ -1,4 +1,5 @@
 @import "./components/all";
+@import "icons";
 @import "variables";
 
 html,
@@ -35,6 +36,8 @@ body {
 
   /*Global Styles*/
   color: var(--colour-text);
+
+  padding: 15px;
 }
 
 .container {

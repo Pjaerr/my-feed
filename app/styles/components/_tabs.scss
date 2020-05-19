@@ -1,0 +1,15 @@
+.collection-tabs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.collection-tabs__tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
