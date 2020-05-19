@@ -3,7 +3,7 @@
         <img class="feed-item__image" src={{@image}} alt="{{@title}} cover"/>
     </div>
     <div class="feed-item__right">
-        <small class="feed-item__url">{{@url}}</small>
+        <small class="feed-item__url">{{getHostName @url}}</small>
         <h1 class="feed-item__title">
             {{@title}}
         </h1>

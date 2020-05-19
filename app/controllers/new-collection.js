@@ -16,30 +16,33 @@ export default class BlogPostController extends Controller {
         ],
         items: [
           {
-            title: "Test Item",
+            title: "Building a Desktop App using Svelte and Electron",
             image:
               "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
             description:
               "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
-            url: "joshuaj.co.uk",
+            url:
+              "https://joshuaj.co.uk/blog/building-desktop-app-svelte-electron",
             date: "Sat, 22 Feb 2020",
           },
           {
-            title: "Test Item",
+            title: "Lessons Learned Speaking at Conferences",
             image:
-              "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
+              "https://joshwcomeau.com/images/og-lessons-learned-speaking-at-conferences.png",
             description:
-              "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
-            url: "joshuaj.co.uk",
-            date: "Sat, 22 Feb 2020",
+              "This post was originally published on Medium in August 2018. I've rewritten it to include stuff I've learned since, and discuss how the COVID-19 pandemic affects it all.",
+            url:
+              "https://joshwcomeau.com/blog/lessons-learned-speaking-at-conferences",
+            date: "Fri, 6 May 2020",
           },
           {
-            title: "Test Item",
+            title: "Lets Create: A Data Visualization using Svelte",
             image:
               "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
             description:
               "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
-            url: "joshuaj.co.uk",
+            url:
+              "https://joshuaj.co.uk/blog/building-desktop-app-svelte-electron",
             date: "Sat, 22 Feb 2020",
           },
         ],
@@ -57,7 +60,7 @@ export default class BlogPostController extends Controller {
               "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
             description:
               "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
-            url: "joshuaj.co.uk",
+            url: "https://joshuaj.co.uk/",
             date: "Sat, 22 Feb 2020",
           },
         ],
