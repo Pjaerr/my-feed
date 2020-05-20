@@ -1,11 +1,14 @@
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 import { action } from "@ember/object";
+import { inject as service } from "@ember/service";
 
 export default class CollectionComponent extends Component {
-  @tracked activeCollection = this.args.collections[0];
+  @service collectionManager;
+
+  @tracked activeCollection;
   @tracked isRefreshBlocked = false;
-  collections = [];
+  @tracked collections = [];
   tabs = [];
 
   constructor(...args) {
@@ -18,16 +21,15 @@ export default class CollectionComponent extends Component {
       items: [],
     };
 
-    for (const collection of this.args.collections) {
-      //Maybe we don't need this as feeds are for the refreshing process and this All collection is just local
-      allCollections.feeds = [...allCollections.feeds, ...collection.feeds];
-
-      allCollections.items = [...allCollections.items, ...collection.items];
+    for (const { feeds, items } of this.args.collections) {
+      allCollections.feeds = [...allCollections.feeds, ...feeds];
+      allCollections.items = [...allCollections.items, ...items];
     }
 
     this.collections = [allCollections, ...this.args.collections];
 
-    console.log(this.collections);
+    this.setActiveCollection(0);
+
     this.tabs = this.collections.map((collection, index) => {
       return {
         name: collection.name,
@@ -40,12 +42,21 @@ export default class CollectionComponent extends Component {
     this.activeCollection = this.collections[index];
   }
 
-  @action refreshCollections() {
+  @action async refreshCollections() {
     if (!this.isRefreshBlocked) {
-      //Refresh collections -- This would go to the API probably through a service
-
-      console.log("Refreshing Collections");
       this.isRefreshBlocked = true;
+
+      //Refresh collections -- This would go to the API probably through a service
+      //If "All" collection is open, just call this.collectionMananer.refreshAllCollections()
+      const updatedCollections = await this.collectionManager.refreshCollection(
+        this.activeCollection.name
+      );
+
+      this.collections = [this.collections[0], ...updatedCollections];
+
+      //NEED TO RESET THIS.ACTIVECOLLECTION HERE SO THAT IT RE-RENDERS.
+      //Failing that, need to figure a way to store activeCollection as just an index and then
+      //yield this.collections[this.activeCollection].items instead.
 
       //The isAllowedToRefresh should probably be stored in local storage so the user can't just reload
       //the page to get what they want.

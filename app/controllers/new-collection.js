@@ -3,11 +3,11 @@ import { action } from "@ember/object";
 import { inject as service } from "@ember/service";
 
 export default class BlogPostController extends Controller {
-  @service dataStorage;
+  @service collectionManager;
 
   //This is temporary. The start new collection will eventually just be a <LinkTo> the relevant route
   @action startNewCollection() {
-    this.dataStorage.setCollections([
+    this.collectionManager.setCollections([
       {
         name: "Frontend",
         feeds: [
