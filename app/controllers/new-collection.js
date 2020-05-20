@@ -9,7 +9,7 @@ export default class BlogPostController extends Controller {
   @action startNewCollection() {
     this.dataStorage.setCollections([
       {
-        name: "Test Collection",
+        name: "Frontend",
         feeds: [
           "https://joshuaj.co.uk/rss.xml",
           "https://joshwcomeau.com/rss.xml",
@@ -48,7 +48,25 @@ export default class BlogPostController extends Controller {
         ],
       },
       {
-        name: "Test Collection 2",
+        name: "Design",
+        feeds: [
+          "https://joshuaj.co.uk/rss.xml",
+          "https://joshwcomeau.com/rss.xml",
+        ],
+        items: [
+          {
+            title: "Test Item",
+            image:
+              "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
+            description:
+              "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
+            url: "https://joshuaj.co.uk/",
+            date: "Sat, 22 Feb 2020",
+          },
+        ],
+      },
+      {
+        name: "Career",
         feeds: [
           "https://joshuaj.co.uk/rss.xml",
           "https://joshwcomeau.com/rss.xml",
