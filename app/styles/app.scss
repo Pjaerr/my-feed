@@ -36,10 +36,13 @@ body {
 
   /*Global Styles*/
   color: var(--colour-text);
-
-  padding: 15px;
+  padding: 20px;
+  overflow-y: scroll; //Always show the horizontal scrollbar to stop layout jumps
 }
 
 .container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+  margin: 0 auto;
 }

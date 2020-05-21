@@ -1,6 +1,12 @@
 .svg-icon {
   width: 24px;
   height: 24px;
+}
 
+.svg-icon--fill {
   fill: var(--colour-text);
+}
+
+.svg-icon--stroke {
+  stroke: var(--colour-text);
 }

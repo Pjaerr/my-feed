@@ -1,12 +1,25 @@
-<p>You aren’t subscribed to any feeds, get started with one of the options below 👇</p>
+
+<section class="no-feeds">
+    <p class="no-feeds__message">You aren’t subscribed to any feeds, get started with one of the options below 👇</p>
 
 
-<LinkTo @route="new-collection">
-    Start a new collection
-</LinkTo>
+    <div class="no-feeds__options">
+        <LinkTo @route="new-collection" class="no-feeds__option">
+            <svg class="svg-icon svg-icon--stroke svg-icon__plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Start a new collection
+        </LinkTo>
 
-<hr/>
+        <span class="no-feeds__divider"></span>
 
-<LinkTo @route="browse">
-    Browse user curated collections
-</LinkTo>
+        <LinkTo @route="browse" class="no-feeds__option">
+            <svg class="svg-icon svg-icon--stroke svg-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" fill="none" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            Browse user curated collections
+        </LinkTo>
+    </div>
+</section>
