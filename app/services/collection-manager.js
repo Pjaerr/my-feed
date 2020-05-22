@@ -1,7 +1,8 @@
 import Service from "@ember/service";
+import { tracked } from "@glimmer/tracking";
 
 export default class CollectionManagerService extends Service {
-  getCollections() {
+  get collections() {
     //Return data from localstorage if it exists
     const collections = window.localStorage.getItem("collections");
 
@@ -12,12 +13,12 @@ export default class CollectionManagerService extends Service {
     }
   }
 
-  setCollections(collections) {
+  set collections(collections) {
     window.localStorage.setItem("collections", JSON.stringify(collections));
   }
 
   async refreshCollection(collectionName) {
-    const collections = this.getCollections();
+    const collections = this.collections;
 
     //Loop through collections and refresh the data matching the collection with the name collectionName
     for (const collection of collections) {
@@ -49,9 +50,9 @@ export default class CollectionManagerService extends Service {
     }
 
     //Update local storage with the new collections
-    this.setCollections(collections);
+    this.collections = collections;
 
-    //Return the updated collections to avoid the caller from having to call getCollections()
+    //Return the updated collections so the caller doesn't need to access local storage.
     return collections;
   }
 
