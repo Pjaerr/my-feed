@@ -111,31 +111,17 @@ module("Acceptance | feed test", function (hooks) {
 
     //Do the collection tabs exist
     const collectionTabs = find('nav[aria-label="Collection navigation"]');
-
     assert.dom(collectionTabs).exists();
 
-    //Do the collection tabs have a refresh button
-    assert
-      .dom(collectionTabs.querySelector('button[aria-label="Refresh"]'))
-      .exists();
-
-    //Do the collection tabs have all of the relevant tabs
+    //Does clicking the career tab change the feed content
     const tabs = [...collectionTabs.querySelectorAll("ul > li > button")];
 
-    const expectedTabs = ["All", "Frontend", "Design", "Career"];
-
+    //Get the career tab
     let careerTab;
 
     tabs.forEach((tab) => {
       //Remove whitespace and new lines
       const tabTextContent = tab.textContent.replace(/\n/g, "").trim();
-
-      assert.ok(
-        expectedTabs.includes(tabTextContent),
-        `"${tabTextContent}" matches one of the following: ${expectedTabs.join(
-          ", "
-        )}`
-      );
 
       //Store the career tab for the below assertion
       if (tabTextContent === "Career") {
@@ -143,7 +129,6 @@ module("Acceptance | feed test", function (hooks) {
       }
     });
 
-    //Does clicking the career tab change the feed content
     const feed = find("section > ul");
 
     assert.equal(

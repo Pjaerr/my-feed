@@ -15,11 +15,8 @@ export default class CollectionsComponent extends Component {
 
     this.setCollections(this.collectionManager.collections);
 
-    this.tabs = this.collections.map(({ name }, index) => {
-      return {
-        name,
-        index,
-      };
+    this.tabs = this.collections.map(({ name }) => {
+      return name;
     });
   }
 
