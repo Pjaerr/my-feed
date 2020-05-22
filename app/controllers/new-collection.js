@@ -7,7 +7,7 @@ export default class BlogPostController extends Controller {
 
   //This is temporary. The start new collection will eventually just be a <LinkTo> the relevant route
   @action startNewCollection() {
-    this.collectionManager.setCollections([
+    this.collectionManager.collections = [
       {
         name: "Frontend",
         feeds: [
@@ -83,7 +83,7 @@ export default class BlogPostController extends Controller {
           },
         ],
       },
-    ]);
+    ];
 
     this.transitionToRoute("/");
   }
