@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow-x: auto;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .collection-tabs__tab {
-  margin-right: 30px;
+  margin-right: 35px;
   button {
     font-size: var(--fontsize-heading);
     font-weight: 700;

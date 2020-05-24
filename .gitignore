@@ -102,3 +102,19 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+#API
+api/null
+api/target
+
+api/my-feed-api/bin
+api/my-feed-api/null
+api/my-feed-api/project/target
+api/my-feed-api/project/project
+api/my-feed-api/build
+
+.history
+.scala_dependencies
+.cache
+.cache-main

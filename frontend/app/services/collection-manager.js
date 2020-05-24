@@ -27,6 +27,8 @@ export default class CollectionManagerService extends Service {
         //Very basic MVP could be to just give the latest data even if it hasn't changed.
         //**The  backend would return sorted by most recent */
 
+        //! We will also split the feeds into their collections
+        //so that we know what goes where when returned from the api
         const feeds = collection.feeds.join(",");
 
         /**
