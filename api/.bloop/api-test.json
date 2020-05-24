@@ -1,0 +1,877 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "api-test",
+        "directory": "C:\\Users\\Josh\\Projects\\my-feed\\api",
+        "workspaceDir": "C:\\Users\\Josh\\Projects\\my-feed\\api",
+        "sources": [
+            "C:\\Users\\Josh\\Projects\\my-feed\\api\\src\\test\\scala-2.13",
+            "C:\\Users\\Josh\\Projects\\my-feed\\api\\src\\test\\scala",
+            "C:\\Users\\Josh\\Projects\\my-feed\\api\\src\\test\\java",
+            "C:\\Users\\Josh\\Projects\\my-feed\\api\\target\\scala-2.13\\src_managed\\test",
+            "C:\\Users\\Josh\\Projects\\my-feed\\api\\target\\scala-2.13\\twirl\\test"
+        ],
+        "dependencies": [
+            "api"
+        ],
+        "classpath": [
+            "C:\\Users\\Josh\\Projects\\my-feed\\api\\.bloop\\api\\scala-2.13\\classes",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalactic\\scalactic_2.13\\3.1.1\\scalactic_2.13-3.1.1.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\httpcomponents\\httpmime\\4.5.6\\httpmime-4.5.6.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.13\\1.2.0\\scala-xml_2.13-1.2.0.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-parser-combinators_2.13\\1.1.2\\scala-parser-combinators_2.13-1.1.2.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-server\\9.4.27.v20200227\\jetty-server-9.4.27.v20200227.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-io\\9.4.27.v20200227\\jetty-io-9.4.27.v20200227.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-http\\9.4.27.v20200227\\jetty-http-9.4.27.v20200227.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-classic\\1.2.3\\logback-classic-1.2.3.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra-test_2.13\\2.7.0\\scalatra-test_2.13-2.7.0.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-webapp\\9.4.27.v20200227\\jetty-webapp-9.4.27.v20200227.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra-scalatest_2.13\\2.7.0\\scalatra-scalatest_2.13-2.7.0.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\1.7.30\\slf4j-api-1.7.30.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\play\\twirl-api_2.13\\1.4.2\\twirl-api_2.13-1.4.2.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\upickle-core_2.13\\0.9.5\\upickle-core_2.13-0.9.5.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-collection-compat_2.13\\2.0.0\\scala-collection-compat_2.13-2.0.0.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-util\\9.4.27.v20200227\\jetty-util-9.4.27.v20200227.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatestplus\\junit-4-12_2.13\\3.1.1.0\\junit-4-12_2.13-3.1.1.0.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\net\\bytebuddy\\byte-buddy\\1.10.5\\byte-buddy-1.10.5.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\objenesis\\objenesis\\2.6\\objenesis-2.6.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\junit\\junit\\4.13\\junit-4.13.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\servlet\\javax.servlet-api\\3.1.0\\javax.servlet-api-3.1.0.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\httpcomponents\\httpclient\\4.5.6\\httpclient-4.5.6.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra_2.13\\2.7.0\\scalatra_2.13-2.7.0.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\commons-codec\\commons-codec\\1.10\\commons-codec-1.10.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\mockito\\mockito-core\\3.3.0\\mockito-core-3.3.0.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\ujson_2.13\\0.9.5\\ujson_2.13-0.9.5.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.13.2\\scala-reflect-2.13.2.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\commons-logging\\commons-logging\\1.2\\commons-logging-1.2.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\geny_2.13\\0.4.2\\geny_2.13-0.4.2.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\googlecode\\juniversalchardet\\juniversalchardet\\1.0.3\\juniversalchardet-1.0.3.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-servlet\\9.4.27.v20200227\\jetty-servlet-9.4.27.v20200227.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\commons\\commons-lang3\\3.9\\commons-lang3-3.9.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatest\\scalatest_2.13\\3.1.1\\scalatest_2.13-3.1.1.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.2\\scala-library-2.13.2.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra-common_2.13\\2.7.0\\scalatra-common_2.13-2.7.0.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\httpcomponents\\httpcore\\4.4.10\\httpcore-4.4.10.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-core\\1.2.3\\logback-core-1.2.3.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-xml\\9.4.27.v20200227\\jetty-xml-9.4.27.v20200227.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\net\\bytebuddy\\byte-buddy-agent\\1.10.5\\byte-buddy-agent-1.10.5.jar",
+            "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-security\\9.4.27.v20200227\\jetty-security-9.4.27.v20200227.jar"
+        ],
+        "out": "C:\\Users\\Josh\\Projects\\my-feed\\api\\.bloop\\api",
+        "classesDir": "C:\\Users\\Josh\\Projects\\my-feed\\api\\.bloop\\api\\scala-2.13\\test-classes",
+        "resources": [
+            "C:\\Users\\Josh\\Projects\\my-feed\\api\\src\\test\\resources",
+            "C:\\Users\\Josh\\Projects\\my-feed\\api\\target\\scala-2.13\\resource_managed\\test"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.13.2",
+            "options": [
+                
+            ],
+            "jars": [
+                "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-compiler\\2.13.2\\scala-compiler-2.13.2.jar",
+                "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.2\\scala-library-2.13.2.jar",
+                "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline\\3.14.1\\jline-3.14.1.jar",
+                "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna\\5.3.1\\jna-5.3.1.jar",
+                "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.13.2\\scala-reflect-2.13.2.jar"
+            ],
+            "analysis": "C:\\Users\\Josh\\Projects\\my-feed\\api\\target\\streams\\test\\bloopAnalysisOut\\_global\\streams\\inc_compile_2.13.zip",
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.7.10-hotspot",
+                "options": [
+                    "-Duser.dir=C:\\Users\\Josh\\Projects\\my-feed\\api"
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scalactic",
+                    "name": "scalactic_2.13",
+                    "version": "3.1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalactic_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalactic\\scalactic_2.13\\3.1.1\\scalactic_2.13-3.1.1.jar"
+                        },
+                        {
+                            "name": "scalactic_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalactic\\scalactic_2.13\\3.1.1\\scalactic_2.13-3.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents",
+                    "name": "httpmime",
+                    "version": "4.5.6",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "httpmime",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\httpcomponents\\httpmime\\4.5.6\\httpmime-4.5.6.jar"
+                        },
+                        {
+                            "name": "httpmime",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\httpcomponents\\httpmime\\4.5.6\\httpmime-4.5.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-xml_2.13",
+                    "version": "1.2.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-xml_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.13\\1.2.0\\scala-xml_2.13-1.2.0.jar"
+                        },
+                        {
+                            "name": "scala-xml_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.13\\1.2.0\\scala-xml_2.13-1.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-parser-combinators_2.13",
+                    "version": "1.1.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-parser-combinators_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-parser-combinators_2.13\\1.1.2\\scala-parser-combinators_2.13-1.1.2.jar"
+                        },
+                        {
+                            "name": "scala-parser-combinators_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-parser-combinators_2.13\\1.1.2\\scala-parser-combinators_2.13-1.1.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-server",
+                    "version": "9.4.27.v20200227",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jetty-server",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-server\\9.4.27.v20200227\\jetty-server-9.4.27.v20200227.jar"
+                        },
+                        {
+                            "name": "jetty-server",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-server\\9.4.27.v20200227\\jetty-server-9.4.27.v20200227-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-io",
+                    "version": "9.4.27.v20200227",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jetty-io",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-io\\9.4.27.v20200227\\jetty-io-9.4.27.v20200227.jar"
+                        },
+                        {
+                            "name": "jetty-io",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-io\\9.4.27.v20200227\\jetty-io-9.4.27.v20200227-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-http",
+                    "version": "9.4.27.v20200227",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jetty-http",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-http\\9.4.27.v20200227\\jetty-http-9.4.27.v20200227.jar"
+                        },
+                        {
+                            "name": "jetty-http",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-http\\9.4.27.v20200227\\jetty-http-9.4.27.v20200227-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "ch.qos.logback",
+                    "name": "logback-classic",
+                    "version": "1.2.3",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "logback-classic",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "7c4f3c474fb2c041d8028740440937705ebb473a"
+                            },
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-classic\\1.2.3\\logback-classic-1.2.3.jar"
+                        },
+                        {
+                            "name": "logback-classic",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-classic\\1.2.3\\logback-classic-1.2.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatra",
+                    "name": "scalatra-test_2.13",
+                    "version": "2.7.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalatra-test_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra-test_2.13\\2.7.0\\scalatra-test_2.13-2.7.0.jar"
+                        },
+                        {
+                            "name": "scalatra-test_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra-test_2.13\\2.7.0\\scalatra-test_2.13-2.7.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-webapp",
+                    "version": "9.4.27.v20200227",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jetty-webapp",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-webapp\\9.4.27.v20200227\\jetty-webapp-9.4.27.v20200227.jar"
+                        },
+                        {
+                            "name": "jetty-webapp",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-webapp\\9.4.27.v20200227\\jetty-webapp-9.4.27.v20200227-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatra",
+                    "name": "scalatra-scalatest_2.13",
+                    "version": "2.7.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalatra-scalatest_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra-scalatest_2.13\\2.7.0\\scalatra-scalatest_2.13-2.7.0.jar"
+                        },
+                        {
+                            "name": "scalatra-scalatest_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra-scalatest_2.13\\2.7.0\\scalatra-scalatest_2.13-2.7.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-api",
+                    "version": "1.7.30",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-api",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\1.7.30\\slf4j-api-1.7.30.jar"
+                        },
+                        {
+                            "name": "slf4j-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\1.7.30\\slf4j-api-1.7.30-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.typesafe.play",
+                    "name": "twirl-api_2.13",
+                    "version": "1.4.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "twirl-api_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\play\\twirl-api_2.13\\1.4.2\\twirl-api_2.13-1.4.2.jar"
+                        },
+                        {
+                            "name": "twirl-api_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\play\\twirl-api_2.13\\1.4.2\\twirl-api_2.13-1.4.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.lihaoyi",
+                    "name": "upickle-core_2.13",
+                    "version": "0.9.5",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "upickle-core_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\upickle-core_2.13\\0.9.5\\upickle-core_2.13-0.9.5.jar"
+                        },
+                        {
+                            "name": "upickle-core_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\upickle-core_2.13\\0.9.5\\upickle-core_2.13-0.9.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-collection-compat_2.13",
+                    "version": "2.0.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-collection-compat_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-collection-compat_2.13\\2.0.0\\scala-collection-compat_2.13-2.0.0.jar"
+                        },
+                        {
+                            "name": "scala-collection-compat_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-collection-compat_2.13\\2.0.0\\scala-collection-compat_2.13-2.0.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-util",
+                    "version": "9.4.27.v20200227",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jetty-util",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-util\\9.4.27.v20200227\\jetty-util-9.4.27.v20200227.jar"
+                        },
+                        {
+                            "name": "jetty-util",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-util\\9.4.27.v20200227\\jetty-util-9.4.27.v20200227-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatestplus",
+                    "name": "junit-4-12_2.13",
+                    "version": "3.1.1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "junit-4-12_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatestplus\\junit-4-12_2.13\\3.1.1.0\\junit-4-12_2.13-3.1.1.0.jar"
+                        },
+                        {
+                            "name": "junit-4-12_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatestplus\\junit-4-12_2.13\\3.1.1.0\\junit-4-12_2.13-3.1.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.bytebuddy",
+                    "name": "byte-buddy",
+                    "version": "1.10.5",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "byte-buddy",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\net\\bytebuddy\\byte-buddy\\1.10.5\\byte-buddy-1.10.5.jar"
+                        },
+                        {
+                            "name": "byte-buddy",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\net\\bytebuddy\\byte-buddy\\1.10.5\\byte-buddy-1.10.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.objenesis",
+                    "name": "objenesis",
+                    "version": "2.6",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "objenesis",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\objenesis\\objenesis\\2.6\\objenesis-2.6.jar"
+                        },
+                        {
+                            "name": "objenesis",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\objenesis\\objenesis\\2.6\\objenesis-2.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "junit",
+                    "name": "junit",
+                    "version": "4.13",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "junit",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\junit\\junit\\4.13\\junit-4.13.jar"
+                        },
+                        {
+                            "name": "junit",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\junit\\junit\\4.13\\junit-4.13-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.servlet",
+                    "name": "javax.servlet-api",
+                    "version": "3.1.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "javax.servlet-api",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\servlet\\javax.servlet-api\\3.1.0\\javax.servlet-api-3.1.0.jar"
+                        },
+                        {
+                            "name": "javax.servlet-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\javax\\servlet\\javax.servlet-api\\3.1.0\\javax.servlet-api-3.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.hamcrest",
+                    "name": "hamcrest-core",
+                    "version": "1.3",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "hamcrest-core",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar"
+                        },
+                        {
+                            "name": "hamcrest-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents",
+                    "name": "httpclient",
+                    "version": "4.5.6",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "httpclient",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\httpcomponents\\httpclient\\4.5.6\\httpclient-4.5.6.jar"
+                        },
+                        {
+                            "name": "httpclient",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\httpcomponents\\httpclient\\4.5.6\\httpclient-4.5.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatra",
+                    "name": "scalatra_2.13",
+                    "version": "2.7.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalatra_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra_2.13\\2.7.0\\scalatra_2.13-2.7.0.jar"
+                        },
+                        {
+                            "name": "scalatra_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra_2.13\\2.7.0\\scalatra_2.13-2.7.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-codec",
+                    "name": "commons-codec",
+                    "version": "1.10",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-codec",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\commons-codec\\commons-codec\\1.10\\commons-codec-1.10.jar"
+                        },
+                        {
+                            "name": "commons-codec",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\commons-codec\\commons-codec\\1.10\\commons-codec-1.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.mockito",
+                    "name": "mockito-core",
+                    "version": "3.3.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "mockito-core",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\mockito\\mockito-core\\3.3.0\\mockito-core-3.3.0.jar"
+                        },
+                        {
+                            "name": "mockito-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\mockito\\mockito-core\\3.3.0\\mockito-core-3.3.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.lihaoyi",
+                    "name": "ujson_2.13",
+                    "version": "0.9.5",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "ujson_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\ujson_2.13\\0.9.5\\ujson_2.13-0.9.5.jar"
+                        },
+                        {
+                            "name": "ujson_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\ujson_2.13\\0.9.5\\ujson_2.13-0.9.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-reflect",
+                    "version": "2.13.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-reflect",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.13.2\\scala-reflect-2.13.2.jar"
+                        },
+                        {
+                            "name": "scala-reflect",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.13.2\\scala-reflect-2.13.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-logging",
+                    "name": "commons-logging",
+                    "version": "1.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-logging",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\commons-logging\\commons-logging\\1.2\\commons-logging-1.2.jar"
+                        },
+                        {
+                            "name": "commons-logging",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\commons-logging\\commons-logging\\1.2\\commons-logging-1.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.lihaoyi",
+                    "name": "geny_2.13",
+                    "version": "0.4.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "geny_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\geny_2.13\\0.4.2\\geny_2.13-0.4.2.jar"
+                        },
+                        {
+                            "name": "geny_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lihaoyi\\geny_2.13\\0.4.2\\geny_2.13-0.4.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.googlecode.juniversalchardet",
+                    "name": "juniversalchardet",
+                    "version": "1.0.3",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "juniversalchardet",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\googlecode\\juniversalchardet\\juniversalchardet\\1.0.3\\juniversalchardet-1.0.3.jar"
+                        },
+                        {
+                            "name": "juniversalchardet",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\com\\googlecode\\juniversalchardet\\juniversalchardet\\1.0.3\\juniversalchardet-1.0.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-servlet",
+                    "version": "9.4.27.v20200227",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jetty-servlet",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-servlet\\9.4.27.v20200227\\jetty-servlet-9.4.27.v20200227.jar"
+                        },
+                        {
+                            "name": "jetty-servlet",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-servlet\\9.4.27.v20200227\\jetty-servlet-9.4.27.v20200227-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-lang3",
+                    "version": "3.9",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-lang3",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\commons\\commons-lang3\\3.9\\commons-lang3-3.9.jar"
+                        },
+                        {
+                            "name": "commons-lang3",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\commons\\commons-lang3\\3.9\\commons-lang3-3.9-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest_2.13",
+                    "version": "3.1.1",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalatest_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatest\\scalatest_2.13\\3.1.1\\scalatest_2.13-3.1.1.jar"
+                        },
+                        {
+                            "name": "scalatest_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatest\\scalatest_2.13\\3.1.1\\scalatest_2.13-3.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.13.2",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.2\\scala-library-2.13.2.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.2\\scala-library-2.13.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatra",
+                    "name": "scalatra-common_2.13",
+                    "version": "2.7.0",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scalatra-common_2.13",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra-common_2.13\\2.7.0\\scalatra-common_2.13-2.7.0.jar"
+                        },
+                        {
+                            "name": "scalatra-common_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scalatra\\scalatra-common_2.13\\2.7.0\\scalatra-common_2.13-2.7.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents",
+                    "name": "httpcore",
+                    "version": "4.4.10",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "httpcore",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\httpcomponents\\httpcore\\4.4.10\\httpcore-4.4.10.jar"
+                        },
+                        {
+                            "name": "httpcore",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\httpcomponents\\httpcore\\4.4.10\\httpcore-4.4.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "ch.qos.logback",
+                    "name": "logback-core",
+                    "version": "1.2.3",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "logback-core",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "864344400c3d4d92dfeb0a305dc87d953677c03c"
+                            },
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-core\\1.2.3\\logback-core-1.2.3.jar"
+                        },
+                        {
+                            "name": "logback-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\qos\\logback\\logback-core\\1.2.3\\logback-core-1.2.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-xml",
+                    "version": "9.4.27.v20200227",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jetty-xml",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-xml\\9.4.27.v20200227\\jetty-xml-9.4.27.v20200227.jar"
+                        },
+                        {
+                            "name": "jetty-xml",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-xml\\9.4.27.v20200227\\jetty-xml-9.4.27.v20200227-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.bytebuddy",
+                    "name": "byte-buddy-agent",
+                    "version": "1.10.5",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "byte-buddy-agent",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\net\\bytebuddy\\byte-buddy-agent\\1.10.5\\byte-buddy-agent-1.10.5.jar"
+                        },
+                        {
+                            "name": "byte-buddy-agent",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\net\\bytebuddy\\byte-buddy-agent\\1.10.5\\byte-buddy-agent-1.10.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-security",
+                    "version": "9.4.27.v20200227",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "jetty-security",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-security\\9.4.27.v20200227\\jetty-security-9.4.27.v20200227.jar"
+                        },
+                        {
+                            "name": "jetty-security",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\eclipse\\jetty\\jetty-security\\9.4.27.v20200227\\jetty-security-9.4.27.v20200227-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.13.2",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.2\\scala-library-2.13.2.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\Josh\\.coursier\\cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.13.2\\scala-library-2.13.2-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "test"
+        ]
+    }
+}
