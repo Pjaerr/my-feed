@@ -1,8 +1,11 @@
 package com.pjaerr.myfeedapi
 
 import org.scalatra._
-
 import ujson.Value
+import scala.xml.XML
+import scala.collection.mutable.ArrayBuffer
+
+case class FeedItem(title: String, description: String, url: String, date: String);
 
 class MyFeedAPIServlet extends ScalatraServlet {
 
@@ -16,34 +19,39 @@ class MyFeedAPIServlet extends ScalatraServlet {
 
     val feeds: Array[String] = feedsString.split(",");
 
-    ujson.Arr(
-      ujson.Obj(
-        "feed" -> feeds(0),
-        "items" -> ujson.Arr(
-          ujson.Obj(
-            "title" -> "Building a Desktop App using Svelte and Electron",
-            "image" -> "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
-            "description" -> "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
-            "url" -> "joshuaj.co.uk",
-            "date" -> "Sat, 22 Feb 2020"
-          ),
-          ujson.Obj(
-            "title" -> "Building a Desktop App using Svelte and Electron",
-            "image" -> "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
-            "description" -> "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
-            "url" -> "joshuaj.co.uk",
-            "date" -> "Sat, 22 Feb 2020"
-          ),
-          ujson.Obj(
-            "title" -> "Building a Desktop App using Svelte and Electron",
-            "image" -> "https://joshuaj.co.uk/building-desktop-app-svelte-electron/cover_image.jpg",
-            "description" -> "In this blogpost I show you how easy it is to build a basic markdown editor for desktop using Svelte and Electron.",
-            "url" -> "joshuaj.co.uk",
-            "date" -> "Sat, 22 Feb 2020"
-          )
-        )
-      )
-    );
+    var result = new ArrayBuffer[ujson.Obj]();
+
+    feeds.foreach(feed => {
+      val xmlDoc = XML.load(feed);
+  
+      var feedItems = new ArrayBuffer[ujson.Obj]();
+      
+      xmlDoc \\ "item" map { node => 
+          var title = (node \ "title").text;
+          var description = "No Description";
+
+          if ((node \ "description").nonEmpty) {
+            description = (node \ "description").text;
+          }
+
+          var url = (node \ "link").text;
+          var date = (node \ "pubDate").text;
+    
+          feedItems += ujson.Obj(
+            "title" -> title,
+            "description" -> description,
+            "url" -> url,
+            "date" -> date
+          );
+      }
+
+      result += ujson.Obj(
+          "feed" -> feed,
+          "items" -> feedItems
+      );
+    });
+
+    ujson.Arr(result);
   }
 
 }
