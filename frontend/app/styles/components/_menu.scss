@@ -1,0 +1,37 @@
+.menu {
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transform: translateX(-500px);
+}
+
+.menu__options {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.menu__navigation {
+  display: flex;
+}
+
+/*Media query here to set menu to flex when on desktop and to hide the menu button*/
+
+.menu--open {
+  transform: translateX(0);
+}
+
+// .menu__navigation--open {
+//   display: flex;
+// }

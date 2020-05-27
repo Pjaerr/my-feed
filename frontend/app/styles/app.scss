@@ -40,6 +40,12 @@ body {
   overflow-y: scroll; //Always show the horizontal scrollbar to stop layout jumps
 }
 
+body.menu-open,
+html.menu-open {
+  overflow: hidden;
+  height: 100%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
