@@ -1,18 +1,17 @@
 .menu {
   position: absolute;
-  background: #fff;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 20px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  transition-property: transform;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  transform: translateX(-500px);
+  width: 100%;
+  height: 100%;
+  background-color: var(--colour-background);
+  transform: translateX(-1000px);
+  transition: transform 0.35s ease-in-out;
+  margin-top: 50px;
+}
+
+.menu--open {
+  transform: translateX(0);
 }
 
 .menu__options {
@@ -24,14 +23,5 @@
 
 .menu__navigation {
   display: flex;
+  padding: 20px;
 }
-
-/*Media query here to set menu to flex when on desktop and to hide the menu button*/
-
-.menu--open {
-  transform: translateX(0);
-}
-
-// .menu__navigation--open {
-//   display: flex;
-// }

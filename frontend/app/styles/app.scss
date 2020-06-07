@@ -19,6 +19,7 @@ body {
   --fontsize-sub-text: 0.6em;
 
   /* Colours*/
+  --colour-background: #fff;
   --colour-text: #2c3e50;
   --colour-highlight: #e67e22;
 
@@ -36,6 +37,7 @@ body {
 
   /*Global Styles*/
   color: var(--colour-text);
+  background-color: var(--colour-background);
   padding: 20px;
   overflow-y: scroll; //Always show the horizontal scrollbar to stop layout jumps
 }
@@ -51,4 +53,5 @@ html.menu-open {
   flex-direction: column;
   max-width: 640px;
   margin: 0 auto;
+  margin-top: 50px;
 }
