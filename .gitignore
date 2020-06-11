@@ -116,3 +116,6 @@ api/build
 .scala_dependencies
 .cache
 .cache-main
+
+api/.bloop
+api/.metals
