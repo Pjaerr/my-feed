@@ -13,4 +13,9 @@
   <listener>
     <listener-class>org.scalatra.servlet.ScalatraListener</listener-class>
   </listener>
+
+  <context-param>
+    <param-name>org.scalatra.cors.allowedOrigins</param-name>
+    <param-value>http://localhost:4200</param-value>
+  </context-param>
 </web-app>

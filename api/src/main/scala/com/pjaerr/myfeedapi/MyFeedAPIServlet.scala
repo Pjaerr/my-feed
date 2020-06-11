@@ -7,7 +7,10 @@ import scala.collection.mutable.ArrayBuffer
 
 case class FeedItem(title: String, description: String, url: String, date: String);
 
-class MyFeedAPIServlet extends ScalatraServlet {
+class MyFeedAPIServlet extends ScalatraServlet with CorsSupport {
+  options("/*"){
+    response.setHeader("Access-Control-Allow-Origin", request.getHeader("Access-Control-Request-Headers"))
+  }
 
   get("/") {
     "Try visiting the /api/get route and passing in a feeds parameter containing rss feed urls";
@@ -36,12 +39,14 @@ class MyFeedAPIServlet extends ScalatraServlet {
               description = (node \ "description").text;
             }
 
+            var image = "https://www.vets4pets.com/siteassets/species/cat/kitten/tiny-kitten-in-field.jpg?w=585&scale=down";
             var url = (node \ "link").text;
             var date = (node \ "pubDate").text;
             
             feedItems += ujson.Obj(
               "title" -> title,
               "description" -> description,
+              "image" -> image,
               "url" -> url,
               "date" -> date
             );

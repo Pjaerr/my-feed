@@ -31,22 +31,20 @@ export default class CollectionManagerService extends Service {
         //so that we know what goes where when returned from the api
         const feeds = collection.feeds.join(",");
 
-        /**
-         * This would be prepended with API hostname in an ember adapter
-         * const updatedItems = await fetch(`/api?feeds=${feeds}`);
-         *
-         *
-         * collection.items = updatedItems;
-         */
+        const updatedFeedsJson = await fetch(
+          `http://localhost:8080/api/get?feeds=${feeds}`
+        );
 
-        collection.items.push({
-          date: "Mon, 28 Feb 2020",
-          description:
-            "Every 10 years there is a changing of the guard in JavaScript. I think we have just started a period of accelerated change that could in future be regarded as the Third Age of JavaScript.",
-          image: "https://www.swyx.io/og_image/writing/js-third-age.png",
-          title: "The Third Age of JavaScript",
-          url: "https://www.swyx.io/writing/js-third-age",
+        const updatedFeeds = await updatedFeedsJson.json();
+
+        let updatedItems = [];
+
+        updatedFeeds[0].forEach((feed) => {
+          feed.items.forEach((item) => updatedItems.push(item));
         });
+
+        collection.items = updatedItems;
+
         break;
       }
     }
