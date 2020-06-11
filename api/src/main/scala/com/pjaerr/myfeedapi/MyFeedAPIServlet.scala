@@ -10,7 +10,7 @@ case class FeedItem(title: String, description: String, url: String, date: Strin
 class MyFeedAPIServlet extends ScalatraServlet {
 
   get("/") {
-    "Hello World!";
+    "Try visiting the /api/get route and passing in a feeds parameter containing rss feed urls";
   }
 
   get("/api/get") {
@@ -22,36 +22,47 @@ class MyFeedAPIServlet extends ScalatraServlet {
     var result = new ArrayBuffer[ujson.Obj]();
 
     feeds.foreach(feed => {
-      val xmlDoc = XML.load(feed);
-  
-      var feedItems = new ArrayBuffer[ujson.Obj]();
-      
-      xmlDoc \\ "item" map { node => 
-          var title = (node \ "title").text;
-          var description = "No Description";
-
-          if ((node \ "description").nonEmpty) {
-            description = (node \ "description").text;
-          }
-
-          var url = (node \ "link").text;
-          var date = (node \ "pubDate").text;
+      try {
+        val xmlDoc = XML.load(feed);
     
-          feedItems += ujson.Obj(
-            "title" -> title,
-            "description" -> description,
-            "url" -> url,
-            "date" -> date
-          );
-      }
+        var feedItems = new ArrayBuffer[ujson.Obj]();
+        
+        xmlDoc \\ "item" map { node => 
+            var title = (node \ "title").text;
+            
+            var description = "No Description";
 
-      result += ujson.Obj(
-          "feed" -> feed,
-          "items" -> feedItems
-      );
+            if ((node \ "description").nonEmpty) {
+              description = (node \ "description").text;
+            }
+
+            var url = (node \ "link").text;
+            var date = (node \ "pubDate").text;
+            
+            feedItems += ujson.Obj(
+              "title" -> title,
+              "description" -> description,
+              "url" -> url,
+              "date" -> date
+            );
+        }
+
+        result += ujson.Obj(
+            "feed" -> feed,
+            "items" -> feedItems
+        );
+    }
+    catch {
+      case e: org.xml.sax.SAXParseException => result += ujson.Obj(
+        "feed" -> feed,
+        "items" -> ujson.Arr()
+      )
+    }
     });
 
-    ujson.Arr(result);
+    response.setHeader("Content-Type", "application/json");
+
+    ujson.Arr(result)
   }
 
 }
