@@ -1,9 +1,9 @@
 <div class="menu__options">
     <button class="menu__toggle-button" type="button" aria-label="toggle menu" {{on "click" this.toggleMenu}}>
         {{#if this.isMenuOpen}}
-            ❌
+            <Icon::Cross/>
         {{else}}
-            🍔
+            <Icon::Hamburger/>
         {{/if}}
     </button>
 
@@ -11,18 +11,50 @@
 </div>
 <div class="menu {{if this.isMenuOpen "menu--open"}}">
     <nav class="menu__navigation">
-        <div class="menu__links">
-            <section class="menu__new-collections">
+        <div class="menu__sections">
+            <section class="menu__section menu__new-collections">
                 <h1>New Collection</h1>
-                
+                <a class="menu__link" href="/new-collection">
+                    <Icon::Plus/>
+                    Start a new collection
+                </a>
+                <a class="menu__link" href="/browse">
+                    <Icon::Browse/>
+                    Browse user curated collections
+                </a>
             </section>
-            <section class="menu__my-collections">
+            <section class="menu__section menu__my-collections">
                 <h1>My Collections</h1>
+                {{!-- There will eventually be functionality for editing a collection. Maybe this will be inline or maybe it will lead to a seperate page. For now they will just be empty pieces of text. --}}
 
+                <ul class="menu__collections">
+                    {{#each this.collectionManager.collections as |collection|}}
+                        <li class="menu__collection">
+                            <a href="#">
+                                {{collection.name}}
+                            </a>
+                        </li>
+                        {{else}}
+                        <li class="menu__collection">
+                            No collections found ☹️
+                        </li>
+                    {{/each}}
+                </ul>
             </section>
-            <section class="menu_import-export-collections">
+            <section class="menu__section menu_import-export-collections">
                 <h1>Import/Export</h1>
-
+                <a class="menu__link" href="/import-collection">
+                    <Icon::Import/>
+                    Import an existing collection
+                </a>
+                <a class="menu__link" href="/export-collection">
+                    <Icon::Export/>
+                    Export a collection
+                </a>
+                <a class="menu__link" href="/publish-collection">
+                    <Icon::Github/>
+                    Publish a collection for other users
+                </a>
             </section>
         </div>
     </nav>

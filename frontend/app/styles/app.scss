@@ -15,6 +15,7 @@ body {
 
   /* Sizes*/
   --fontsize-heading: 1em;
+  --fontsize-menu-heading: 1.2em;
   --fontsize-body: 0.8em;
   --fontsize-sub-text: 0.6em;
 
@@ -40,6 +41,16 @@ body {
   background-color: var(--colour-background);
   padding: 20px;
   overflow-y: scroll; //Always show the horizontal scrollbar to stop layout jumps
+}
+
+body a {
+  color: var(--colour-text);
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    color: var(--colour-highlight);
+  }
 }
 
 body.menu-open,

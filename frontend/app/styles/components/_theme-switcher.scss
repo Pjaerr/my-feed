@@ -1,0 +1,5 @@
+@import "../mixins";
+
+.theme-switcher {
+  @include reset-button-styles();
+}
