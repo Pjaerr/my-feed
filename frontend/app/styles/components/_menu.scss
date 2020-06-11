@@ -3,24 +3,24 @@
 .menu {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -100%;
   width: 100%;
   height: 100%;
   background-color: var(--colour-background);
-  transform: translateX(-1000px);
-  transition: transform 0.15s ease-in-out;
+  transition: left 0.15s ease-in-out;
   margin-top: 50px;
 
   @media (min-width: 1280px) {
-    position: sticky;
+    position: fixed;
     top: 40px;
+    width: auto;
     margin: 0;
     flex: 0.5;
   }
 }
 
 .menu--open {
-  transform: translateX(0);
+  left: 0;
   overflow-y: scroll;
 
   @media (min-width: 1280px) {

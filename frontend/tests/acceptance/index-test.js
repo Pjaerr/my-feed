@@ -12,7 +12,7 @@ module("Acceptance | feed test", function (hooks) {
 
     assert.equal(currentURL(), "/");
 
-    assert.dom('button[aria-label="menu"]').exists();
+    assert.dom('button[aria-label="toggle menu"]').exists();
 
     assert.dom('a[href="/new-collection"]').hasText("Start a new collection");
 
@@ -107,7 +107,7 @@ module("Acceptance | feed test", function (hooks) {
     await visit("/");
     assert.equal(currentURL(), "/");
 
-    assert.dom('button[aria-label="menu"]').exists();
+    assert.dom('button[aria-label="toggle menu"]').exists();
 
     //Do the collection tabs exist
     const collectionTabs = find('nav[aria-label="Collection navigation"]');
@@ -129,7 +129,7 @@ module("Acceptance | feed test", function (hooks) {
       }
     });
 
-    const feed = find("section > ul");
+    const feed = find("main > section > ul");
 
     assert.equal(
       feed.querySelectorAll("li").length,
