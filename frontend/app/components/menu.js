@@ -10,12 +10,14 @@ export default class MenuComponent extends Component {
   @action toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
 
-    if (this.isMenuOpen) {
-      document.documentElement.classList.add("menu-open");
-      document.body.classList.add("menu-open");
-    } else {
-      document.documentElement.classList.remove("menu-open");
-      document.body.classList.remove("menu-open");
+    if (window.innerWidth < 1280) {
+      if (this.isMenuOpen) {
+        document.documentElement.classList.add("menu-open");
+        document.body.classList.add("menu-open");
+      } else {
+        document.documentElement.classList.remove("menu-open");
+        document.body.classList.remove("menu-open");
+      }
     }
   }
 }
