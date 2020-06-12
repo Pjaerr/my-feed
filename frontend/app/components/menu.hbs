@@ -6,7 +6,7 @@
             <Icon::Hamburger/>
         {{/if}}
     </button>
-
+    <a href="/">My Feed</a>
     <ThemeSwitcher/>
 </div>
 <div class="menu {{if this.isMenuOpen "menu--open"}}">
@@ -14,11 +14,11 @@
         <div class="menu__sections">
             <section class="menu__section menu__new-collections">
                 <h1>New Collection</h1>
-                <a class="menu__link" href="/new-collection">
+                <a href="/new-collection" class="menu__link">
                     <Icon::Plus/>
                     Start a new collection
                 </a>
-                <a class="menu__link" href="/browse">
+                <a href="/browse" class="menu__link" >
                     <Icon::Browse/>
                     Browse user curated collections
                 </a>
@@ -43,15 +43,15 @@
             </section>
             <section class="menu__section menu_import-export-collections">
                 <h1>Import/Export</h1>
-                <a class="menu__link" href="/import-collection">
+                <a class="menu__link" href="#">
                     <Icon::Import/>
                     Import an existing collection
                 </a>
-                <a class="menu__link" href="/export-collection">
+                <a class="menu__link" href="#">
                     <Icon::Export/>
                     Export a collection
                 </a>
-                <a class="menu__link" href="/publish-collection">
+                <a class="menu__link" href="#">
                     <Icon::Github/>
                     Publish a collection for other users
                 </a>
