@@ -9,7 +9,7 @@ export default class CollectionManagerService extends Service {
     if (collections) {
       return JSON.parse(collections);
     } else {
-      return null;
+      return [];
     }
   }
 
@@ -17,29 +17,44 @@ export default class CollectionManagerService extends Service {
     window.localStorage.setItem("collections", JSON.stringify(collections));
   }
 
+  //! Make sure collection name doesn't already exist when creating a new collection
+  async createNewCollection({ name, feeds }) {
+    //First check if this.collectionManager.collections is empty. If it is, set it to an empty array.
+    //Then loop through the collections and add a new one with all of the information (mock for now)
+
+    const latestItems = await this.getLatestItems(feeds);
+
+    let items = [];
+
+    latestItems.forEach((feed) => {
+      feed.items.forEach((item) => items.push(item));
+    });
+
+    // this.collections = [...this.collections, { name, feeds, items }];
+    this.set("collections", [...this.collections, { name, feeds, items }]);
+  }
+
+  async getLatestItems(feeds) {
+    const latestItemsJson = await fetch(
+      `http://localhost:8080/api/get?feeds=${feeds.join(",")}`
+    );
+
+    const latestItems = await latestItemsJson.json();
+
+    //To be swapped once the backend removes the nested array from response
+    return latestItems[0];
+  }
+
   async refreshCollection(collectionName) {
-    const collections = this.collections;
-
-    //Loop through collections and refresh the data matching the collection with the name collectionName
-    for (const collection of collections) {
+    for (const collection of this.collections) {
       if (collection.name === collectionName) {
-        //Here we go to the API with collection.feeds and check if there is an update.
-        //Very basic MVP could be to just give the latest data even if it hasn't changed.
-        //**The  backend would return sorted by most recent */
-
-        //! We will also split the feeds into their collections
-        //so that we know what goes where when returned from the api
-        const feeds = collection.feeds.join(",");
-
-        const updatedFeedsJson = await fetch(
-          `http://localhost:8080/api/get?feeds=${feeds}`
+        const latestItems = await this.getLatestItems(
+          collection.feeds.join(",")
         );
-
-        const updatedFeeds = await updatedFeedsJson.json();
 
         let updatedItems = [];
 
-        updatedFeeds[0].forEach((feed) => {
+        latestItems[0].forEach((feed) => {
           feed.items.forEach((item) => updatedItems.push(item));
         });
 
@@ -48,12 +63,6 @@ export default class CollectionManagerService extends Service {
         break;
       }
     }
-
-    //Update local storage with the new collections
-    this.collections = collections;
-
-    //Return the updated collections so the caller doesn't need to access local storage.
-    return collections;
   }
 
   async refreshAllCollections() {
