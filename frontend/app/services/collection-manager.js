@@ -41,8 +41,7 @@ export default class CollectionManagerService extends Service {
 
     const latestItems = await latestItemsJson.json();
 
-    //To be swapped once the backend removes the nested array from response
-    return latestItems[0];
+    return latestItems;
   }
 
   async refreshCollection(collectionName) {
@@ -54,7 +53,7 @@ export default class CollectionManagerService extends Service {
 
         let updatedItems = [];
 
-        latestItems[0].forEach((feed) => {
+        latestItems.forEach((feed) => {
           feed.items.forEach((item) => updatedItems.push(item));
         });
 

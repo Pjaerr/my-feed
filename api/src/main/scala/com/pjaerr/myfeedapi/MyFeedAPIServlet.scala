@@ -71,7 +71,7 @@ class MyFeedAPIServlet extends ScalatraServlet with CorsSupport {
 
     response.setHeader("Content-Type", "application/json");
 
-    ujson.Arr(result)
+    ujson.Arr.from(result)
   }
 
 }
