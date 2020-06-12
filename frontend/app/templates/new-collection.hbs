@@ -15,7 +15,7 @@
         <label for="feed_url">
             Add Feed
             <div class="new-collection__add-feed-input">
-                <Input @value={{this.currentFeed}} name="feed_url" {{on "keyup" this.enterKeyPressed}}/>
+                <Input @value={{this.currentFeed}} name="feed_url" {{on "keyup" this.enterKeyPressed}} type="url" autocomplete="off"/>
                 <button type="button" aria-label="add feed" {{on "click" this.addFeed}}>
                     <Icon::Plus/>
                 </button>
