@@ -12,11 +12,20 @@ export default class NewCollectionController extends Controller {
 
   @tracked isLoading = false;
 
+  @action enterKeyPressed(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+
+      this.addFeed();
+    }
+  }
+
   @action addFeed() {
-    //Could probably do some standard checking to see if this is a valid URL to catch easy stuff
-    //Also check that the feed doesn't already exist within the feeds so we don't have duplicates
-    //?Could also limit the number of feeds per collection in the MVP
-    this.feeds = [...this.feeds, this.currentFeed];
+    if (this.feeds.includes(this.currentFeed)) {
+      return;
+    }
+
+    this.feeds = [this.currentFeed, ...this.feeds];
 
     this.currentFeed = "";
   }
@@ -26,6 +35,10 @@ export default class NewCollectionController extends Controller {
   }
 
   @action async createNewCollection() {
+    if (this.feeds.length <= 0) {
+      return;
+    }
+
     this.isLoading = true;
 
     await this.collectionManager.createNewCollection({

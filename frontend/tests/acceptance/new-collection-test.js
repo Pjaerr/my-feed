@@ -44,6 +44,37 @@ module("Acceptance | new collection", function (hooks) {
       .containsText("https://myexamplefeed.com/rss.xml");
   });
 
+  test("Trying to add a duplicate feed", async function (assert) {
+    await visit("/new-collection");
+
+    const addFeedInput = find('input[name="feed_url"]');
+
+    const addFeedButton = find('button[aria-label="add feed"]');
+
+    await fillIn(addFeedInput, "https://myexamplefeed.com/rss.xml");
+
+    await click(addFeedButton);
+
+    const removeFeedButton = find('button[aria-label="remove feed"]');
+    const feedsList = removeFeedButton.parentElement.parentElement;
+
+    assert.equal(
+      feedsList.childElementCount,
+      1,
+      "A new feed has been added to the list of feeds"
+    );
+
+    await fillIn(addFeedInput, "https://myexamplefeed.com/rss.xml");
+
+    await click(addFeedButton);
+
+    assert.equal(
+      feedsList.childElementCount,
+      1,
+      "Adding the same feed a second time doesn't work"
+    );
+  });
+
   test("Removing a feed", async function (assert) {
     await visit("/new-collection");
 

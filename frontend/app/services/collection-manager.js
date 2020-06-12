@@ -3,7 +3,7 @@ import { tracked } from "@glimmer/tracking";
 
 export default class CollectionManagerService extends Service {
   get collections() {
-    //Return data from localstorage if it exists
+    //Return data from localstorage if it exists. Possible improvement to avoid localstorage synchronous overhead would be to store the collections in local storage and in a local tracked variable and then only go to localstorage if that tracked variable is empty (which would be the case if the user reloaded the page for example).
     const collections = window.localStorage.getItem("collections");
 
     if (collections) {

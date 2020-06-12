@@ -7,37 +7,38 @@
     <h1 class="new-collection__title">{{this.name}}</h1>
 
     <section class="new-collection__input">
+        <label for="name">
+            Name
+            <Input @value={{this.name}} maxlength="25" name="name"/>
+        </label>
 
-    
-    <label for="name">
-        Name
-        <Input @value={{this.name}} maxlength="25" name="name"/>
-    </label>
-
-    <label for="feed_url">
-        Add Feed
-        <div class="new-collection__add-feed-input">
-            <Input @value={{this.currentFeed}} name="feed_url"/>
-            <button type="button" aria-label="add feed" {{on "click" this.addFeed}}>
-                <Icon::Plus/>
-            </button>
-        </div>
-    </label>
+        <label for="feed_url">
+            Add Feed
+            <div class="new-collection__add-feed-input">
+                <Input @value={{this.currentFeed}} name="feed_url" {{on "keyup" this.enterKeyPressed}}/>
+                <button type="button" aria-label="add feed" {{on "click" this.addFeed}}>
+                    <Icon::Plus/>
+                </button>
+            </div>
+        </label>
+        <section class="new-collection__feeds">
+            <h2 class="new-collection__feeds__title">Feeds</h2>
+            {{#if (isEqual this.feeds.length 0)}}
+                Enter your first RSS feed above 👆
+            {{/if}}
+            <ul>
+                {{#each this.feeds as |feed|}}
+                    <li>
+                        <button type="button" aria-label="remove feed" class="new-collection__remove-feed-button" {{on "click" (fn this.removeFeed feed)}}>
+                            <Icon::Cross/>
+                        </button>
+                        {{feed}}
+                    </li>
+                {{/each}}
+            </ul>
+        </section>
     </section>
 
-<section class="new-collection__feeds">
-    <h2 class="new-collection__feeds__title">Feeds</h2>
-    <ul>
-        {{#each this.feeds as |feed|}}
-            <li>
-                <button type="button" aria-label="remove feed" class="new-collection__remove-feed-button" {{on "click" (fn this.removeFeed feed)}}>
-                    <Icon::Cross/>
-                </button>
-                {{feed}}
-            </li>
-        {{/each}}
-    </ul>
-</section>
 
 <button type="button" class="new-collection__create-collection-button" {{on "click" this.createNewCollection}}>
     Create Collection
