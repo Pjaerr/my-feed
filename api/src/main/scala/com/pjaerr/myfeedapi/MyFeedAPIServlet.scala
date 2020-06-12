@@ -58,10 +58,14 @@ class MyFeedAPIServlet extends ScalatraServlet with CorsSupport {
         );
     }
     catch {
-      case e: org.xml.sax.SAXParseException => result += ujson.Obj(
+      case saxParseException: org.xml.sax.SAXParseException => result += ujson.Obj(
         "feed" -> feed,
         "items" -> ujson.Arr()
-      )
+      );
+      case unknownHostException: java.net.UnknownHostException => result += ujson.Obj(
+        "feed" -> feed,
+        "items" -> ujson.Arr()
+      );
     }
     });
 
