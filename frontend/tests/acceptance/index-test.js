@@ -2,7 +2,7 @@ import { module, test } from "qunit";
 import { visit, currentURL, find, click } from "@ember/test-helpers";
 import { setupApplicationTest } from "ember-qunit";
 
-module("Acceptance | feed test", function (hooks) {
+module("Acceptance | index test", function (hooks) {
   setupApplicationTest(hooks);
 
   test("Visiting / without existing collections", async function (assert) {

@@ -9,16 +9,16 @@
     <section class="new-collection__input">
 
     
-    <label>
+    <label for="name">
         Name
-        <Input @value={{this.name}} maxlength="25"/>
+        <Input @value={{this.name}} maxlength="25" name="name"/>
     </label>
 
-    <label>
+    <label for="feed_url">
         Add Feed
         <div class="new-collection__add-feed-input">
-            <Input @value={{this.currentFeed}}/>
-            <button type="button" {{on "click" this.addFeed}}>
+            <Input @value={{this.currentFeed}} name="feed_url"/>
+            <button type="button" aria-label="add feed" {{on "click" this.addFeed}}>
                 <Icon::Plus/>
             </button>
         </div>
@@ -30,7 +30,7 @@
     <ul>
         {{#each this.feeds as |feed|}}
             <li>
-                <button type="button" class="new-collection__remove-feed-button" {{on "click" (fn this.removeFeed feed)}}>
+                <button type="button" aria-label="remove feed" class="new-collection__remove-feed-button" {{on "click" (fn this.removeFeed feed)}}>
                     <Icon::Cross/>
                 </button>
                 {{feed}}
